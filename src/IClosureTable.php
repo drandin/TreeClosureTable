@@ -66,7 +66,7 @@ interface IClosureTable {
     /**
      * Return level of element
      * @param $idEntry
-     * @return mixed
+     * @return int
      */
     public function getLevel($idEntry);
 
