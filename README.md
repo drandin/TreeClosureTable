@@ -85,7 +85,9 @@ CREATE TABLE `commentsTree` (
 
 Check having element in tree
     
+```php
     public bool Commentator::hasEntry(int $idEntry);
+```
 
     /**
      * Delete branch of tree
