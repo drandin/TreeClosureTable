@@ -8,8 +8,8 @@ return array(
     'db' => array(
         'host' => 'localhost',
         'dbname' => 'TreeComments',
-        'user' => 'drandin',
-        'password' => '1224996',
+        'user' => 'xxx',
+        'password' => 'xxx',
         'charset' => 'utf8',
     ),
 
