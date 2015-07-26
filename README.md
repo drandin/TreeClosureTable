@@ -114,7 +114,7 @@ Delete branch of tree
 Add one new element into tree
  
 ```php
-    public bool Commentator::add(ClosureTableBase $obj, int $idEntry = 0);
+    public bool Commentator::add(ClosureTableData $obj, int $idEntry = 0);
 ```
 Return part of tree or entire hierarchy from root as array
   

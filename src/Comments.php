@@ -3,7 +3,7 @@
 /**
  * Class Comments
  */
-class Comments extends ClosureTableBase
+class Comments extends ClosureTableData
 {
     /**
      * @param array $data

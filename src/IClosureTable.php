@@ -21,11 +21,11 @@ interface IClosureTable {
 
     /**
      * Add one new element into tree
-     * @param ClosureTableBase $obj
+     * @param ClosureTableData $obj
      * @param int $idEntry
      * @return bool
      */
-    public function add(ClosureTableBase $obj, $idEntry = 0);
+    public function add(ClosureTableData $obj, $idEntry = 0);
 
     /**
      * Return part of tree or entire hierarchy from root as array

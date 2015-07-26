@@ -17,7 +17,7 @@ class ClosureTableCollection implements \Iterator
     {
         if (is_array($items)) {
             foreach ($items as $item) {
-                if ($item instanceof ClosureTableBase) {
+                if ($item instanceof ClosureTableData) {
                     $this->addItem($item);
                 }
             }
@@ -27,10 +27,10 @@ class ClosureTableCollection implements \Iterator
     }
 
     /**
-     * @param ClosureTableBase $item
+     * @param ClosureTableData $item
      * @return $this
      */
-    public function addItem(ClosureTableBase $item)
+    public function addItem(ClosureTableData $item)
     {
         if (!empty($item)) {
             $this->items[] = $item;

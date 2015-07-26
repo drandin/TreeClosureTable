@@ -1,9 +1,9 @@
 <?php namespace TreeClosureTable;
 
 /**
- * Class ClosureTableBase
+ * Class ClosureTableData
  */
-abstract class ClosureTableBase
+abstract class ClosureTableData
 {
     /**
      * Номер записи

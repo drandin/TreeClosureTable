@@ -173,10 +173,10 @@ class ClosureTableManagement implements IClosureTable
 
     /**
      * @param $nameProperty
-     * @param $obj ClosureTableBase
+     * @param $obj ClosureTableData
      * @return bool
      */
-    private function getProperty($nameProperty, ClosureTableBase $obj)
+    private function getProperty($nameProperty, ClosureTableData $obj)
     {
         $nameMethod = $this->nameMethodGetter($nameProperty, $obj);
 
@@ -428,7 +428,7 @@ class ClosureTableManagement implements IClosureTable
 
     /**
      * @param $idEntry
-     * @return ClosureTableBase|null
+     * @return ClosureTableData|null
      */
     public function getOneItem($idEntry)
     {
@@ -491,7 +491,7 @@ class ClosureTableManagement implements IClosureTable
 
                     $obj = $this->getObject($treeData[(int)$item['idEntry']]);
 
-                    if ($obj instanceof ClosureTableBase) {
+                    if ($obj instanceof ClosureTableData) {
                         $this->objTree->addItem($obj);
                     }
 
@@ -506,7 +506,7 @@ class ClosureTableManagement implements IClosureTable
 
     /**
      * @param $item
-     * @return null|ClosureTableBase
+     * @return null|ClosureTableData
      */
     private function getObject($item)
     {
@@ -573,11 +573,11 @@ class ClosureTableManagement implements IClosureTable
     }
 
     /**
-     * @param ClosureTableBase $obj
+     * @param ClosureTableData $obj
      * @param int $idEntry
      * @return bool
      */
-    public function add(ClosureTableBase $obj, $idEntry = 0)
+    public function add(ClosureTableData $obj, $idEntry = 0)
     {
         if ($idEntry >= 0) {
 
