@@ -47,7 +47,7 @@ CREATE TABLE `commentsTree` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
-Для настройки параметров работы TreeClosureTable и получение объекта для работы с деревом:
+Настройки параметров работы TreeClosureTable и получение объекта класса Commentator для работы с деревом:
 
 ```php
 $parameters = array(
@@ -74,9 +74,15 @@ $parameters = array(
     
 );
     
-// Object PDO
+/**
+* Object PDO
+* $dsn, $user, $password - your parameter for connect DB
+*/
 $pdo = new PDO($dsn, $user, $password);
     
+/**
+* Object Commentator
+*/    
 $commentator = new \TreeClosureTable\Commentator($parameters, $pdo);
 
 ```
