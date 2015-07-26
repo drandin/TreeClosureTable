@@ -36,8 +36,14 @@ CREATE TABLE `commentsTree` (
   KEY `idSubject` (`idSubject`),
   KEY `main` (`idAncestor`,`idDescendant`,`idNearestAncestor`,`level`),
   KEY `idNearestAncestor` (`idNearestAncestor`),
-  CONSTRAINT `commentsTree_ibfk_1` FOREIGN KEY (`idAncestor`) REFERENCES `comments` (`idEntry`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `commentsTree_ibfk_2` FOREIGN KEY (`idDescendant`) REFERENCES `comments` (`idEntry`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `commentsTree_ibfk_1` 
+  FOREIGN KEY (`idAncestor`) 
+  REFERENCES `comments` (`idEntry`) 
+  ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `commentsTree_ibfk_2` 
+  FOREIGN KEY (`idDescendant`) 
+  REFERENCES `comments` (`idEntry`) 
+  ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
@@ -45,7 +51,7 @@ CREATE TABLE `commentsTree` (
 
 ```php
 
-    $parameters = array(
+$parameters = array(
 
     /**
      * It is the name of table in DB where stored comments
@@ -67,12 +73,12 @@ CREATE TABLE `commentsTree` (
      */
     'idTableData' => 'idEntry'
     
-    );
+);
     
-    // Object PDO
-    $pdo = new PDO($dsn, $user, $password);
+// Object PDO
+$pdo = new PDO($dsn, $user, $password);
     
-    $commentator = new \TreeClosureTable\Commentator($parameters, $pdo);
+$commentator = new \TreeClosureTable\Commentator($parameters, $pdo);
 
 ```
 
