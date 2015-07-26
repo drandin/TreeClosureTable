@@ -9,7 +9,7 @@
 
 В каталоге example приведён пример использования TreeClosureTable.
 
-Схемы таблиц comments and commentsTree:
+Схемы таблиц `comments` and `commentsTree`:
 
 ```sql
 CREATE TABLE `comments` (
@@ -50,7 +50,6 @@ CREATE TABLE `commentsTree` (
 Для настройки параметров работы TreeClosureTable и получение объекта для работы с деревом:
 
 ```php
-
 $parameters = array(
 
     /**
@@ -148,3 +147,11 @@ Return count of elements in tree which belongs to $idSubject
 ```php
     public int Commentator::countItemsBySubject(int $idSubject);
 ```
+
+<h2>Author</h2>
+
+[Igor Drandin] (https://github.com/drandin)
+
+<h2>License</h2>
+
+MIT Public License
