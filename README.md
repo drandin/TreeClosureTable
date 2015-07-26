@@ -2,6 +2,10 @@
 
 Хранение иерархических древовидных структур в базе данных методом «Closure Table» совмещённым с «Adjacency List».
 
+# Example
+
+http://drandin.ru/projects/TreeClosureTable/example/index.html
+
 <h2>Как использовать TreeClosureTable?</h2>
 
 1. Создать две таблицы в базе данных. 
