@@ -12,11 +12,11 @@
 
             if (idSubject > 0 && comments) {
 
-                comments.load(methodGetComments);
+                loadComments();
 
                 $('#buttonNewComment').click(function () {
-                    var textComment = $('#comment').val();
-                    if (textComment.length > 0) {
+                    var textComment = $('#comment').val().trim();
+                    if (textComment.length > 0 && /^\w+.*$/.test(textComment)) {
                         $.post(methodAddComment, {
                             textComment: textComment,
                             idSubject: idSubject
@@ -62,10 +62,10 @@
                     var idEntry = +e.currentTarget.getAttribute("idComment");
 
                     if (idEntry > 0) {
-                        var commentText = $('#reply' + idEntry).val();
-                        if (commentText.length > 0) {
+                        var textComment = $('#reply' + idEntry).val().trim();
+                        if (textComment.length > 0 && /^\w+.*$/.test(textComment)) {
                             $.post(methodReplyToComment, {
-                                textComment: commentText,
+                                textComment: textComment,
                                 idSubject: idSubject,
                                 idEntry: idEntry
                             }, function (response) {
@@ -78,11 +78,9 @@
                                 .slideDown(0)
                                 .delay(3000)
                                 .slideUp(600);
-
                         }
                     }
                 });
-
             }
             else {
                 console.log('Object of configurations was defined wrong!');
@@ -99,7 +97,7 @@
                 var responseJSON = JSON.parse(response);
 
                 if (responseJSON['res'] === true) {
-                    $('#comments').load(methodGetComments);
+                    loadComments();
 
                     if (typeof callback === "function") {
                         callback();
@@ -114,6 +112,16 @@
             }
         };
 
+
+        function loadComments() {
+            $('#comments').load(methodGetComments + '?idSubject=' + idSubject);
+        }
+
+        if(!String.prototype.trim){
+            String.prototype.trim = function(){
+                return this.replace(/^\s+|\s+$/g,'');
+            };
+        }
     }
 
     window.TreeComments = TreeComments;

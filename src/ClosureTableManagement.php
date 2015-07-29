@@ -1,4 +1,11 @@
-<?php namespace TreeClosureTable;
+<?php
+
+/**
+ * @author      Igor Drandin <idrandin@gmail.com>
+ * @copyright   2015 Igor Drandin
+ */
+
+namespace TreeClosureTable;
 
 use TreeClosureTable\Exception\ExceptionClosureTable;
 
