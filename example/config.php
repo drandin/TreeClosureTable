@@ -39,7 +39,7 @@ return array(
     /**
      * ID user, who is authorized on site on this moment (for example)
      */
-    'idUserAuthorized' => 100,
+    'idUserAuthorized' => 40,
 
     /**
      * Code of news on site, for example

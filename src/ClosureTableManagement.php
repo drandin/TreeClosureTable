@@ -635,7 +635,4 @@ class ClosureTableManagement implements IClosureTable
 
         return false;
     }
-
-
-
 }

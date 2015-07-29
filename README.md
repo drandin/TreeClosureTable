@@ -6,6 +6,10 @@
 
 http://drandin.ru/projects/TreeClosureTable/example/index.html
 
+# Статья на Habrahabr
+
+http://habrahabr.ru/post/263629/
+
 <h2>Как использовать TreeClosureTable?</h2>
 
 1. Создать две таблицы в базе данных. 
