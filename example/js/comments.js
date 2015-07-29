@@ -16,7 +16,10 @@
 
                 $('#buttonNewComment').click(function () {
                     var textComment = $('#comment').val().trim();
-                    if (textComment.length > 0 && /^\w+.*$/.test(textComment)) {
+
+                    alert('>'+ textComment);
+
+                    if (textComment.length > 0) {
                         $.post(methodAddComment, {
                             textComment: textComment,
                             idSubject: idSubject
@@ -63,7 +66,7 @@
 
                     if (idEntry > 0) {
                         var textComment = $('#reply' + idEntry).val().trim();
-                        if (textComment.length > 0 && /^\w+.*$/.test(textComment)) {
+                        if (textComment.length > 0) {
                             $.post(methodReplyToComment, {
                                 textComment: textComment,
                                 idSubject: idSubject,
