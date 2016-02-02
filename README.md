@@ -4,7 +4,7 @@
 
 # Example
 
-http://drandin.ru/projects/TreeClosureTable/example/index.html
+http://examples.drandin.ru/projects/TreeClosureTable/example/index.html
 
 # Статья на Habrahabr
 
