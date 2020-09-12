@@ -6,10 +6,6 @@ https://github.com/drandin/closure-table-comments
 
 Хранение иерархических древовидных структур в базе данных методом «Closure Table» совмещённым с «Adjacency List».
 
-# Example
-
-http://examples.drandin.ru/projects/TreeClosureTable/example/index.html
-
 # Статья на Habrahabr
 
 http://habrahabr.ru/post/263629/
